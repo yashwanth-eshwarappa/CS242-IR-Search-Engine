@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+  margin-top: 1%;
+  line-height: 1.6;
+  /* background-image: url(bg.jpeg); */
+}
+
+.App-logo {
+  height: 18vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 4s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+   0% { transform: rotate(-15deg); } 
+   50% { transform: rotate(15deg); } 
+   100% { transform: rotate(-15deg); }
+}
+
+/* Search egine CSS */
+.searchLabel {
+  text-align: justify;
+  color: navy;
+}
+
+.indexHeadingLabel {
+  text-align: justify;
+  color: rgb(0, 0, 0);
+}
+
+.searchSubmit {
+  background-color: green;
+  color: aliceblue;
+  text-transform: uppercase;
+  font-weight : bold ;
+  width: 3cm;
+}
+
+.responseText {
+  margin-top: 1%;
+  font-weight: bold;
+}
+
+.responseBox {
+width: 400px;
+margin: 0 auto;
+overflow: auto;
+border: 1px solid #0f0;
+padding: 2px;
+text-align: justify;
+background: transparent;
+}
