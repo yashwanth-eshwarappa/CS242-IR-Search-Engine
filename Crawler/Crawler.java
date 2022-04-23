@@ -85,10 +85,10 @@ public class Crawler {
         }
     }
     public static void main(String[] args) {
-        // if(args.length <2) {
-        //     System.out.println("Usage java main <urlseeds> <stopwords>");
-        //     System.exit(-1);
-        // }
+        if(args.length <2) {
+            System.out.println("Usage java main <urlseeds> <stopwords>");
+            System.exit(-1);
+        }
         int dataSize =0;
         List<String> links =new ArrayList<String>();
         List<String> stopWords =new ArrayList<String>();
@@ -98,8 +98,8 @@ public class Crawler {
         HashMap<String, Boolean> visitedHash =new HashMap<String, Boolean>();
 
         try {
-            Scanner s =new Scanner(new File("src/stopwords_en.txt"));
-            // Scanner s =new Scanner(new File(args[1]));
+//             Scanner s =new Scanner(new File("src/stopwords_en.txt"));
+            Scanner s =new Scanner(new File(args[1]));
 
             while(s.hasNext()) {
                 stopWords.add(s.next());
@@ -112,8 +112,8 @@ public class Crawler {
         }
 
         try {
-            Scanner s =new Scanner(new File("src/urlseeds.dat"));
-            // Scanner s =new Scanner(new File(args[0]));
+//             Scanner s =new Scanner(new File("src/urlseeds.dat"));
+            Scanner s =new Scanner(new File(args[0]));
 
             while(s.hasNext()) {
                 links.add(s.next());
@@ -125,7 +125,7 @@ public class Crawler {
             System.out.println(ex);
         }
 
-        // try {
+        try {
             for(int i =0; i <links.size(); i++) {
                 savePages(pages);
                 saveProgress(i, links, skipURL, visited);
@@ -205,10 +205,10 @@ public class Crawler {
                 }
             }
             savePages(pages);
-        // }
-        // catch(Exception ex) {
-        //     System.out.println("Something went wrong");
-        //     System.out.println(ex);
-        // }
+        }
+        catch(Exception ex) {
+            System.out.println("Something went wrong");
+            System.out.println(ex);
+        }
     }
 }
